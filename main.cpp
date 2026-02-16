@@ -29,3 +29,24 @@ class Civil {
 		}
 
 };
+
+class Army {
+        protected:
+
+                bool  muzzle; //наличие дула или ствола для выстрела
+                bool warhead; //наличие трюма для выпуска боеголовки
+                bool gun;     // наличие автоматического оружия(пулемёт)
+                bool tactical_defence; //наличие тактической защиты
+        public:
+                int quan_muzzle = 0;  // патроны ствола
+                int quan_warhead = 0; // патроны боеголовок
+                int quan_gun = 0;         // патроны пулемёта
+                int quan_defence = 0; // заряд тактической защиты
+
+        private:
+
+
+};
+
+class BTR: protected Army{}
+
