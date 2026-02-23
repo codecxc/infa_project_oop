@@ -7,17 +7,19 @@ class Cell {
 	private:
 		float money; // ценность
 		bool state=false; // состояние f-не занятно, t-занято
+		std::string name="";
 	public:
 		Cell() {};
 		float getMoney() {return this->money;}
 		void setMoney(float value) {this->money=value;}
 		bool getState() {return this->state;}
-		void setState(bool st) {this->state=st;}
+		void setState(bool st, std::string name) {this->state=st;this->name=name;}
+		std::string getName() {return this->name;}
 		~Cell() {};
 };
 
 int randInt() {
-    	return rand()%11;
+    	return rand()%10;
 }
 void initRandom() {
     	srand(time(nullptr));
@@ -38,7 +40,9 @@ Cell** generateMap(int n) {
 void printMap(Cell** map, int n) {
 	for(int i=0;i<n;++i) {
 		for(int j=0;j<n;++j) {
-            		std::cout<<map[i][j].getMoney()<<" ";
+			if(map[i][j].getState()==false) {
+            			std::cout<<map[i][j].getMoney()<<" ";
+			} else {std::cout<<map[i][j].getName()<<" ";}
         	}
 		std::cout<<std::endl;
 	}
