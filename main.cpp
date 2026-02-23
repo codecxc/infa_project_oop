@@ -8,7 +8,8 @@ class Vechnicle {
 		bool is_use; // живо-здорово
 		double health; // хпшка 0-100
 		double dangerous; // дэмэдж
-		
+		char type; // A or C
+
 		std::string name; // имя
 		int money; // число монет
 	public:
@@ -20,6 +21,7 @@ class Vechnicle {
 		virtual	void setDangerous(double dangerous)=0;
 		virtual void setName(std::string name)=0;
 		virtual void setMoney(int money)=0;
+		virtual void setType(char type)=0;
 
 
 		virtual double getWeight()=0;
@@ -30,6 +32,7 @@ class Vechnicle {
                 virtual double getDangerous()=0;
 		virtual std::string getName()=0;
                 virtual int getMoney()=0;
+		virtual char getType()=0;
 };
 
 class Civil:public Vechnicle {
@@ -39,8 +42,11 @@ class Civil:public Vechnicle {
 		Civil() {
 			this->dangerous=5.5;
 		}
-		virtual void setPassengers(int passengers);
-		virtual int getPassengers();
+		double getDangerous() {return this->dangerous;}
+		void setType('C') {this->type='C';}
+		char getType() {return this->type;}
+		virtual void setPassengers(int passengers)=0;
+		virtual int getPassengers()=0;
 		~Civil();
 };
 
@@ -55,6 +61,10 @@ class Army:public Vechnicle {
                 int quan_gun = 0;         // патроны пулемёта
                 double quan_defence = 0; // заряд тактической защиты в %
         public:
+
+		void setType('A') {this->type='A';}
+                char getType() {return this->type;}
+		
 		virtual void setMuzzle(bool muzzle)=0;
 		virtual void setWarhead(bool warhead)=0;
 		virtual void setGun(bool gun)=0;
@@ -73,6 +83,4 @@ class Army:public Vechnicle {
                 virtual int getQuanGun()=0;
                 virtual double getQuanDefence()=0;
 };
-
-class BTR: protected Army{}
 
