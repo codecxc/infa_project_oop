@@ -93,3 +93,67 @@ void Army::setType(char type) {
 char Army::getType() {
     	return this->type;
 }
+
+void Army::setMuzzle(bool muzzle) {
+   	this->muzzle = muzzle;
+}
+
+void Army::setWarhead(bool warhead) {
+    	this->warhead = warhead;
+}
+
+void Army::setGun(bool gun) {
+    	this->gun = gun;
+}
+
+void Army::setTacticaldefence(bool tactical_defence) {
+    	this->tactical_defence = tactical_defence;
+}
+
+void Army::setQuanMuzzle(int quan_muzzle) {
+    	this->quan_muzzle = quan_muzzle;
+}
+
+void Army::setQuanWarhead(int quan_warhead) {
+    	this->quan_warhead = quan_warhead;
+}
+
+void Army::setQuanGun(int quan_gun) {
+    	this->quan_gun = quan_gun;
+}
+
+void Army::setQuanDefence(double quan_defence) {
+    	this->quan_defence = quan_defence;
+}
+
+bool Army::getMuzzle() {
+	return this->muzzle;
+}
+
+bool Army::getWarhead() {
+    	return this->warhead;
+}
+
+bool Army::getGun() {
+    	return this->gun;
+}
+
+bool Army::getTacticaldefence() {
+    	return this->tactical_defence;
+}
+
+int Army::getQuanMuzzle() {
+    	return this->quan_muzzle;
+}
+
+int Army::getQuanWarhead() {
+    	return this->quan_warhead;
+}
+
+int Army::getQuanGun() {
+    	return this->quan_gun;
+}
+
+double Army::getQuanDefence() {
+    	return this->quan_defence;
+}
