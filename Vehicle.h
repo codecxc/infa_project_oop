@@ -67,24 +67,23 @@ class Army:public Vechnicle {
 		void setType(char type) override;
    		char getType() override;
 
-		
-		virtual void setMuzzle(bool muzzle)=0;
-		virtual void setWarhead(bool warhead)=0;
-		virtual void setGun(bool gun)=0;
-		virtual void setTacticaldefence(bool tactical_defence)=0;
-		virtual void setQuanMuzzle(int quan_muzzle)=0;
-		virtual void setQuanWarhead(int quan_warhead)=0;
-		virtual void setQuanGun(int quan_gun)=0;
-		virtual void setQuanDefence(double quan_defence)=0;
-		
-		virtual bool getMuzzle()=0;
-                virtual bool getWarhead()=0;
-                virtual bool getGun()=0;
-                virtual bool getTacticaldefence()=0;
-                virtual int getQuanMuzzle()=0;
-                virtual int getQuanWarhead()=0;
-                virtual int getQuanGun()=0;
-                virtual double getQuanDefence()=0;
+		void setMuzzle(bool muzzle) override;
+		void setWarhead(bool warhead) override;
+		void setGun(bool gun) override;
+		void setTacticaldefence(bool tactical_defence) override;
+		void setQuanMuzzle(int quan_muzzle) override;
+		void setQuanWarhead(int quan_warhead) override;
+		void setQuanGun(int quan_gun) override;
+		void setQuanDefence(double quan_defence) override;
+
+		bool getMuzzle() override;
+		bool getWarhead() override;
+		bool getGun() override;
+		bool getTacticaldefence() override;
+		int getQuanMuzzle() override;
+		int getQuanWarhead() override;
+		int getQuanGun() override;
+		double getQuanDefence() override;
 };
 
 
