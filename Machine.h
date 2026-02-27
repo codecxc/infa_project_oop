@@ -3,7 +3,7 @@
 
 #include "Vehicle.h"
 
-class Fly_Sea:public Army, public Civil {
+class Fly_Sea:public Vechnicle {
 	protected:
 	public:
 		void moveForward(int s) override;
@@ -15,7 +15,7 @@ class Fly_Sea:public Army, public Civil {
 
 };
 
-class Earth:public Army, public Civil {
+class Earth:public Vechnicle {
         protected:
         public:
                 void moveForward(int s) override;
@@ -24,6 +24,7 @@ class Earth:public Army, public Civil {
                 void moveLeft(int s) override;
 
 };
+
 
 
 #endif
