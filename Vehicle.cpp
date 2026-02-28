@@ -1,7 +1,8 @@
 #include "Vehicle.h"
 #include <iostream>
 
-Vechnicle::~Vehnicle() {}
+Army::Army() {}
+
 void Vechnicle::setWeight(double weight) {
 	this->weight=weight;
 }
@@ -81,7 +82,14 @@ void Civil::setPassengers(int passengers) {
 	this->passengers=passengers;
 }
 int Civil::getPassengers() {
-	return this->passengers
+	return this->passengers;
+}
+
+void Army::setPassengers(int passengers) {
+	this->passengers=passengers;
+}
+int Army::getPassengers() {
+	return this->passengers;
 }
 
 Army::~Army() {}

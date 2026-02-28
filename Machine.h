@@ -3,28 +3,30 @@
 
 #include "Vehicle.h"
 
-class Fly_Sea:public Vechnicle {
+class Fly_Sea:public Army {
 	protected:
 	public:
-		void moveForward(int s) override;
-		void moveBackward(int s) override;
-		void moveRight(int s) override;
-		void moveLeft(int s) override;
-		void moveDiagRight(int s) override;
-		void moveDiagLeft(int s) override;
+		Fly_Sea();
+		virtual ~Fly_Sea();
+		virtual void moveForward(int s);
+		virtual void moveBackward(int s);
+		virtual void moveRight(int s);
+		virtual void moveLeft(int s);
+		virtual void moveDiagRight(int s);
+		virtual void moveDiagLeft(int s);
 
 };
 
-class Earth:public Vechnicle {
+class Earth:public Army {
         protected:
         public:
-                void moveForward(int s) override;
-                void moveBackward(int s) override;
-                void moveRight(int s) override;
-                void moveLeft(int s) override;
+				Earth();
+        		virtual ~Earth(); 
+                virtual void moveForward(int s);
+                virtual void moveBackward(int s);
+                virtual void moveRight(int s);
+                virtual void moveLeft(int s);
 
 };
-
-
 
 #endif

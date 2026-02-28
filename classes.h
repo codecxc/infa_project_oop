@@ -3,13 +3,13 @@
 
 #include "Machine.h"
 
-class BTR: public Earth, public Army {
+class BTR: public Earth {
 private:
     const int capacity = 20;
     int currentTroops; 
 public:
     BTR();
-    void loadTroops(int count) override;
+    void loadTroops(int count);
     void unloadTroops();
     void shoot_gun();
     int getCurrentTroops();
@@ -20,7 +20,7 @@ public:
     void shoot_muzzle();
 };
 
-class LADA: public Civil, public Earth {
+class LADA: public Earth {
 private:
     int price = 500000;
 public:
@@ -31,7 +31,7 @@ public:
     void addPassenger();
 };
 
-class AURUS: public Civil, public Earth {
+class AURUS: public Earth {
 private:
     const int trunkCapacity = 15;
     int currentCargo = 0;
@@ -48,7 +48,7 @@ public:
     int getFreeSpace();
 };
 
-class TU214: public Civil, public Fly_Sea {
+class TU214: public Fly_Sea {
 private:
     const int maxPassengers = 210;
     int currentPassengers = 0;
@@ -61,7 +61,7 @@ public:
     int getFlightAltitude();
 };
 
-class SU24: public Army, public Fly_Sea {
+class SU24: public Fly_Sea {
 private:
     int bombs = 500;
     int missiles = 200;
